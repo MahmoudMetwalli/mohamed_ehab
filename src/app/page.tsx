@@ -118,6 +118,7 @@ const translations: TranslationsType = {
 };
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [content, setContent] = useState<ContentType>(defaultContent);
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [activeSection, setActiveSection] = useState("hero");
