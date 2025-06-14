@@ -230,11 +230,6 @@ export default function Home() {
     { id: "description", label: t("nav.description"), href: "#description" },
     { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
     { id: "photos", label: t("nav.photos"), href: "#photos" },
-    {
-      id: "compatibility",
-      label: t("nav.compatibility"),
-      href: "#compatibility",
-    },
   ];
 
   const scrollToSection = (id: string) => {
