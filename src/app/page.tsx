@@ -7,12 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown, Globe } from "lucide-react";
 
 interface ContentType {
-  productName: string;
-  productSubtitle: string;
-  productDescription: string;
-  productDetailedDescription: string;
   videoUrl: string;
-  compatibilityText: string;
   whatsappNumber: string;
   photos: string[];
   logoUrl: string;
@@ -26,17 +21,8 @@ interface TranslationsType {
 }
 
 const defaultContent: ContentType = {
-  productName: "LumiPro",
-  productSubtitle:
-    "LumiPro isn't just a diffuser, it's a revolution in dental photography. We've redefined light control with precision, and a design philosophy focused on professionals who demand excellence.",
-  productDescription:
-    "LumiPro is a light diffuser transforming harsh flash light into soft, balanced illumination enhancing the detail, color accuracy, and depth in every photo. Whether you're documenting for records, showcasing aesthetics, or building your brand, this tool gives you total control over your image.",
-  productDetailedDescription:
-    "LumiPro is a light diffuser transforming harsh flash light into soft, balanced illumination enhancing the detail, color accuracy, and depth in every photo.\n\nWhether you're documenting for records, showcasing aesthetics, or building your brand, this tool gives you total control over your image.",
   videoUrl:
     "https://www.youtube.com/watch?v=7sKfVjz3AkY&pp=ygUOZGVudGFsIGNvbnRlbnQ%3D",
-  compatibilityText:
-    "Seamless Compatibility: Tailored to integrate perfectly with top flash systems like the Godox MFR76 and Yongnuo YN14EX II.",
   whatsappNumber: "+201093044708",
   photos: [
     "/DSC_0310-2.jpg",
@@ -48,34 +34,52 @@ const defaultContent: ContentType = {
 };
 
 const translations: TranslationsType = {
+  // Navigation
   "nav.product": { en: "Meet LumiPro", ar: "تعرف على لومي برو" },
   "nav.description": { en: "LumiPro Features", ar: "مميزات لومي برو" },
   "nav.video": { en: "Video", ar: "الفيديو" },
   "nav.photos": { en: "Photos", ar: "الصور" },
   "nav.compatibility": { en: "Compatibility", ar: "التوافق" },
+
+  // Hero Section
   "hero.cta": { en: "Learn More", ar: "اعرف المزيد" },
+
+  // Product Section - Core Content
+  "product.name": { en: "LumiPro", ar: "لومي برو" },
   "product.title": { en: "Meet LumiPro", ar: "تعرف على لومي برو" },
-  "description.title": { en: "LumiPro Features", ar: "مميزات لومي برو" },
-  "video.title": { en: "Watch it in Action", ar: "شاهده في العمل" },
-  "photos.title": { en: "Product Footage & Results", ar: "لقطات المنتج والنتائج" },
-  "compatibility.title": { en: "Compatibility", ar: "التوافق" },
-  "contact.whatsapp": {
-    en: "Contact us on WhatsApp",
-    ar: "تواصل معنا على واتساب",
+  "product.description": {
+    en: "LumiPro isn't just a diffuser, it's a revolution in dental photography. We've redefined light control with precision, and a design philosophy focused on professionals who demand excellence.",
+    ar: "لومي برو ليس مجرد موزع للضوء، إنه ثورة في تصوير الأسنان. لقد أعدنا تعريف التحكم في الضوء بدقة، وفلسفة تصميم تركز على المهنيين الذين يطالبون بالتميز.",
   },
-  "contact.whatsapp.tooltip": { en: "Chat with us", ar: "تواصل معنا" },
-  // LumiPro specific features
-  "product.feature.precision": { en: "Precision Diffusion", ar: "انتشار الضوء بدقة" },
+  "product.detailed.description": {
+    en: "LumiPro is a light diffuser transforming harsh flash light into soft, balanced illumination enhancing the detail, color accuracy, and depth in every photo.\n\nWhether you're documenting for records, showcasing aesthetics, or building your brand, this tool gives you total control over your image.",
+    ar: "لومي برو هو موزع للضوء يحول الفلاش القاسي إلى إضاءة ناعمة ومتوازنة تعزز التفاصيل ودقة الألوان والعمق في كل صورة.\n\nسواء كنت توثق للسجلات، أو تعرض الجماليات، أو تبني علامتك التجارية، فإن هذه الأداة تمنحك السيطرة الكاملة على صورتك.",
+  },
+  "product.premium": { en: "Premium Quality", ar: "جودة ممتازة" },
+  "product.view": { en: "View", ar: "عرض" },
+  "product.buynow": { en: "Buy Now", ar: "اشتري الآن" },
+
+  // Product Features
+  "product.feature.precision": {
+    en: "Precision Diffusion",
+    ar: "انتشار الضوء بدقة",
+  },
   "product.feature.precision.desc": {
     en: "Customized light softness, designed by dentists, for dentists.",
     ar: "نعومة ضوء مخصصة، مصممة بواسطة أطباء الأسنان، لأطباء الأسنان.",
   },
-  "product.feature.durable": { en: "Ultra-Durable Build", ar: "بناء فائق المتانة" },
+  "product.feature.durable": {
+    en: "Ultra-Durable Build",
+    ar: "بناء فائق المتانة",
+  },
   "product.feature.durable.desc": {
     en: "Manufactured using premium material optimized opacity to ensure perfect light scattering and long-term durability.",
     ar: "مُصنع باستخدام مواد ممتازة بشفافية محسنة لضمان تشتت مثالي للضوء ومتانة طويلة المدى.",
   },
-  "product.feature.professional": { en: "Professional Results", ar: "نتائج احترافية" },
+  "product.feature.professional": {
+    en: "Professional Results",
+    ar: "نتائج احترافية",
+  },
   "product.feature.professional.desc": {
     en: "Converts clinical lighting into studio-quality imaging—every shot, every time.",
     ar: "يحول الإضاءة السريرية إلى تصوير بجودة الاستوديو—في كل لقطة، في كل مرة.",
@@ -85,7 +89,9 @@ const translations: TranslationsType = {
     en: "Designed to save time and improve workflow.",
     ar: "مصمم لتوفير الوقت وتحسين سير العمل.",
   },
-  "product.premium": { en: "Premium Quality", ar: "جودة ممتازة" },
+
+  // Description Features
+  "description.title": { en: "LumiPro Features", ar: "مميزات لومي برو" },
   "description.feature.technology": {
     en: "Innovative Technology",
     ar: "تقنية مبتكرة",
@@ -107,6 +113,37 @@ const translations: TranslationsType = {
     en: "Developed by leaders in dental photography, trusted by experts across the field.",
     ar: "طُور بواسطة رواد في تصوير الأسنان، موثوق به من قبل الخبراء في المجال.",
   },
+
+  // Video Section
+  "video.title": { en: "Watch it in Action", ar: "شاهده في العمل" },
+
+  // Photos Section
+  "photos.title": {
+    en: "Product Footage & Results",
+    ar: "لقطات المنتج والنتائج",
+  },
+
+  // Compatibility Section
+  "compatibility.title": { en: "Compatibility", ar: "التوافق" },
+  "compatibility.text": {
+    en: "Seamless Compatibility: Tailored to integrate perfectly with top flash systems like the Godox MFR76 and Yongnuo YN14EX II.",
+    ar: "توافق سلس: مصمم للتكامل المثالي مع أنظمة الفلاش الأفضل مثل Godox MFR76 و Yongnuo YN14EX II.",
+  },
+
+  // Contact & WhatsApp
+  "contact.whatsapp": {
+    en: "Contact us on WhatsApp",
+    ar: "تواصل معنا على واتساب",
+  },
+  "contact.whatsapp.tooltip": { en: "Chat with us", ar: "تواصل معنا" },
+
+  // Feedbacks Section
+  "feedbacks.title": {
+    en: "What Dentists Are Saying",
+    ar: "ماذا يقول أطباء الأسنان",
+  },
+
+  // Footer
   "footer.quicklinks": { en: "Quick Links", ar: "روابط سريعة" },
   "footer.contact": { en: "Contact Us", ar: "اتصل بنا" },
   "footer.contact.question": {
@@ -114,9 +151,10 @@ const translations: TranslationsType = {
     ar: "هل لديك أسئلة حول منتجنا؟ اتصل بنا عبر واتساب.",
   },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
-  "product.view": { en: "View", ar: "عرض" },
-  "product.buynow": { en: "Buy Now", ar: "اشتري الآن" },
-  "feedbacks.title": { en: "What Dentists Are Saying", ar: "ماذا يقول أطباء الأسنان" },
+  "footer.description": {
+    en: "LumiPro isn't just a diffuser, it's a revolution in dental photography. We've redefined light control with precision, and a design philosophy focused on professionals who demand excellence.",
+    ar: "لومي برو ليس مجرد موزع للضوء، إنه ثورة في تصوير الأسنان. لقد أعدنا تعريف التحكم في الضوء بدقة، وفلسفة تصميم تركز على المهنيين الذين يطالبون بالتميز.",
+  },
 };
 
 export default function Home() {
@@ -171,7 +209,11 @@ export default function Home() {
     { id: "product", label: t("nav.product"), href: "#product" },
     { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
     { id: "photos", label: t("nav.photos"), href: "#photos" },
-    { id: "compatibility", label: t("nav.compatibility"), href: "#compatibility" },
+    {
+      id: "compatibility",
+      label: t("nav.compatibility"),
+      href: "#compatibility",
+    },
   ];
 
   const platforms = [
@@ -347,39 +389,6 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section */}
-      <section
-        id="hero"
-        className="min-h-screen bg-gradient-to-br from-black to-gray-900 flex items-center justify-center relative"
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto px-6 md:px-8 lg:px-12 py-20 text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
-            {content.productName}
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
-            {content.productSubtitle}
-          </p>
-          <Button
-            size="lg"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-full"
-            onClick={() => scrollToSection("video")}
-          >
-            {t("hero.cta")}
-          </Button>
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white rounded-full"
-              onClick={() => scrollToSection("video")}
-            >
-              <ChevronDown className="h-6 w-6" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Video Section */}
       <section id="video" className="py-16 lg:py-24 bg-black">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
@@ -389,9 +398,15 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
               <iframe
-                src={content.videoUrl.includes('youtube.com') || content.videoUrl.includes('youtu.be') 
-                  ? content.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/').split('&')[0]
-                  : content.videoUrl}
+                src={
+                  content.videoUrl.includes("youtube.com") ||
+                  content.videoUrl.includes("youtu.be")
+                    ? content.videoUrl
+                        .replace("watch?v=", "embed/")
+                        .replace("youtu.be/", "youtube.com/embed/")
+                        .split("&")[0]
+                    : content.videoUrl
+                }
                 title="LumiPro Video"
                 className="w-full h-full"
                 frameBorder="0"
@@ -403,128 +418,115 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="min-h-screen bg-black flex items-center justify-center relative"
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 py-20 text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
+            {t("product.name")}
+          </h1>
+          <Button
+            size="lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-full"
+            onClick={() => scrollToSection("product")}
+          >
+            {t("hero.cta")}
+          </Button>
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white rounded-full"
+              onClick={() => scrollToSection("product")}
+            >
+              <ChevronDown className="h-6 w-6" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Product Section */}
       <section id="product" className="py-16 lg:py-24 bg-black">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-white">
             {t("product.title")}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            <div className="lg:col-span-2">
-              <p className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
-                {content.productDescription}
+          <div className="flex flex-col items-center">
+            <div className="text-center max-w-4xl">
+              <p className="text-xl lg:text-2xl mb-12 text-white leading-relaxed">
+                {t("product.description")}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1">{t("product.feature.precision")}</h3>
-                    <p className="text-xs text-gray-600">{t("product.feature.precision.desc")}</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1">
-                      {t("product.feature.durable")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.durable.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1">
-                      {t("product.feature.professional")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.professional.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1">
-                      {t("product.feature.time")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.time.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
-            <div className="lg:col-span-1">
+            <div className="max-w-md">
               <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 relative">
                 <Image
-                  src={content.photos[0] || "https://source.unsplash.com/random/400x500/?product"}
+                  src={
+                    content.photos[0] ||
+                    "https://source.unsplash.com/random/300x400/?product"
+                  }
                   alt="Product"
-                  width={400}
-                  height={500}
+                  width={300}
+                  height={400}
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
-                  <h3 className="text-white text-lg font-bold">{content.productName}</h3>
-                  <p className="text-gray-200 text-sm">{t("product.premium")}</p>
+                  <h3 className="text-white text-lg font-bold">
+                    {t("product.name")}
+                  </h3>
+                  <p className="text-gray-200 text-sm">
+                    {t("product.premium")}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Continue with product description */}
           <div className="mt-16 max-w-4xl mx-auto">
-            <div className="bg-gray-900 rounded-lg shadow-lg p-8">
-              <p className="text-xl text-gray-200 leading-relaxed whitespace-pre-line text-center">
-                {content.productDetailedDescription}
+            <div className="bg-black rounded-lg shadow-lg p-8">
+              <p className="text-xl text-white leading-relaxed whitespace-pre-line text-center">
+                {t("product.detailed.description")}
               </p>
               <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                <Card className="bg-white border-orange-200">
                   <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                          clipRule="evenodd"
+                        ></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold text-sm mb-1">{t("product.feature.precision")}</h3>
-                    <p className="text-xs text-gray-600">{t("product.feature.precision.desc")}</p>
+                    <h3 className="font-bold text-sm mb-1 text-black">
+                      {t("product.feature.precision")}
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.precision.desc")}
+                    </p>
                   </CardContent>
                 </Card>
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                <Card className="bg-white border-orange-200">
                   <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold text-sm mb-1">
+                    <h3 className="font-bold text-sm mb-1 text-black">
                       {t("product.feature.durable")}
                     </h3>
                     <p className="text-xs text-gray-600">
@@ -532,10 +534,14 @@ export default function Home() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                <Card className="bg-white border-orange-200">
                   <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path
                           fillRule="evenodd"
                           d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
@@ -543,7 +549,7 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold text-sm mb-1">
+                    <h3 className="font-bold text-sm mb-1 text-black">
                       {t("product.feature.professional")}
                     </h3>
                     <p className="text-xs text-gray-600">
@@ -551,10 +557,14 @@ export default function Home() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                <Card className="bg-white border-orange-200">
                   <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path
                           fillRule="evenodd"
                           d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -562,7 +572,7 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold text-sm mb-1">
+                    <h3 className="font-bold text-sm mb-1 text-black">
                       {t("product.feature.time")}
                     </h3>
                     <p className="text-xs text-gray-600">
@@ -571,7 +581,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </div>
-              
+
               {/* Buy Now Button */}
               <div className="mt-12 text-center">
                 <a
@@ -596,7 +606,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {/* Feedback 1 */}
-            <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
+            <div className="bg-black rounded-lg p-6 shadow-lg border border-orange-500">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">AH</span>
@@ -608,41 +618,59 @@ export default function Home() {
               </div>
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    key={i}
+                    className="w-5 h-5 text-orange-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
               <p className="text-gray-300 italic">
-                &ldquo;LumiPro has completely transformed my dental photography. The precision and control it offers is unmatched. My patients love seeing their results in such clear, professional images.&rdquo;
+                &ldquo;LumiPro has completely transformed my dental photography.
+                The precision and control it offers is unmatched. My patients
+                love seeing their results in such clear, professional
+                images.&rdquo;
               </p>
             </div>
 
             {/* Feedback 2 */}
-            <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
+            <div className="bg-black rounded-lg p-6 shadow-lg border border-orange-500">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">SM</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Dr. Sarah Mohamed</h3>
+                  <h3 className="text-white font-semibold">
+                    Dr. Sarah Mohamed
+                  </h3>
                   <p className="text-gray-400 text-sm">Orthodontist</p>
                 </div>
               </div>
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    key={i}
+                    className="w-5 h-5 text-orange-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
               <p className="text-gray-300 italic">
-                &ldquo;The three diffusion patterns give me incredible flexibility. Whether I&apos;m documenting orthodontic progress or showcasing final results, LumiPro delivers studio-quality images every time.&rdquo;
+                &ldquo;The three diffusion patterns give me incredible
+                flexibility. Whether I&apos;m documenting orthodontic progress
+                or showcasing final results, LumiPro delivers studio-quality
+                images every time.&rdquo;
               </p>
             </div>
 
             {/* Feedback 3 */}
-            <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
+            <div className="bg-black rounded-lg p-6 shadow-lg border border-orange-500">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">KA</span>
@@ -654,13 +682,20 @@ export default function Home() {
               </div>
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    key={i}
+                    className="w-5 h-5 text-orange-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
               <p className="text-gray-300 italic">
-                &ldquo;As a professional who demands excellence, LumiPro exceeds my expectations. The build quality is exceptional and it saves me significant time in my workflow. Highly recommended!&rdquo;
+                &ldquo;As a professional who demands excellence, LumiPro exceeds
+                my expectations. The build quality is exceptional and it saves
+                me significant time in my workflow. Highly recommended!&rdquo;
               </p>
             </div>
           </div>
@@ -688,7 +723,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <h3 className="text-white text-lg font-semibold">
-                    {`${content.productName} - ${t("product.view")} ${
+                    {`${t("product.name")} - ${t("product.view")} ${
                       index + 1
                     }`}
                   </h3>
@@ -706,9 +741,9 @@ export default function Home() {
             {t("compatibility.title")}
           </h2>
           <div className="max-w-4xl mx-auto mt-8">
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-lg p-8 border border-orange-500">
-              <p className="text-lg mb-8 text-center text-gray-200">
-                {content.compatibilityText}
+            <div className="bg-black rounded-lg shadow-lg p-8 border border-orange-500">
+              <p className="text-lg mb-8 text-center text-white">
+                {t("compatibility.text")}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
                 {platforms.map((platform) => (
@@ -719,7 +754,9 @@ export default function Home() {
                     <div className="bg-orange-500 p-4 rounded-full shadow-md text-white mb-3">
                       {platform.icon}
                     </div>
-                    <span className="font-semibold text-white">{platform.name}</span>
+                    <span className="font-semibold text-white">
+                      {platform.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -755,7 +792,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-black text-white py-12">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div>
@@ -766,7 +803,7 @@ export default function Home() {
                 height={50}
                 className="h-10 mb-4"
               />
-              <p className="text-gray-400">{content.productDescription}</p>
+              <p className="text-gray-400">{t("footer.description")}</p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">
@@ -811,9 +848,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500">
+          <div className="mt-10 pt-8 border-t border-orange-500 text-center text-gray-400">
             <p>
-              © {new Date().getFullYear()} {content.productName}.{" "}
+              © {new Date().getFullYear()} {t("product.name")}.{" "}
               {t("footer.rights")}
             </p>
             <div className="mt-2 flex justify-center space-x-4">
