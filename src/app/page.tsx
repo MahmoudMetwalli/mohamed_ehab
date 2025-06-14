@@ -26,17 +26,17 @@ interface TranslationsType {
 }
 
 const defaultContent: ContentType = {
-  productName: "Amazing Product",
+  productName: "LumiPro",
   productSubtitle:
-    "Discover the revolutionary product that will change your life",
+    "LumiPro isn't just a diffuser, it's a revolution in dental photography. We've redefined light control with precision, and a design philosophy focused on professionals who demand excellence.",
   productDescription:
-    "Our innovative product combines cutting-edge technology with sleek design to bring you the ultimate experience.",
+    "LumiPro is a light diffuser transforming harsh flash light into soft, balanced illumination enhancing the detail, color accuracy, and depth in every photo. Whether you're documenting for records, showcasing aesthetics, or building your brand, this tool gives you total control over your image.",
   productDetailedDescription:
-    "This amazing product features high-quality materials, innovative technology, and a user-friendly design. It is perfect for everyday use and will make your life easier and more enjoyable.",
+    "LumiPro is a light diffuser transforming harsh flash light into soft, balanced illumination enhancing the detail, color accuracy, and depth in every photo.\n\nWhether you're documenting for records, showcasing aesthetics, or building your brand, this tool gives you total control over your image.",
   videoUrl:
     "https://www.youtube.com/watch?v=7sKfVjz3AkY&pp=ygUOZGVudGFsIGNvbnRlbnQ%3D",
   compatibilityText:
-    "Our product is compatible with iOS, Android, Windows, and MacOS platforms.",
+    "Seamless Compatibility: Tailored to integrate perfectly with top flash systems like the Godox MFR76 and Yongnuo YN14EX II.",
   whatsappNumber: "+201093044708",
   photos: [
     "/DSC_0310-2.jpg",
@@ -48,64 +48,64 @@ const defaultContent: ContentType = {
 };
 
 const translations: TranslationsType = {
-  "nav.product": { en: "Meet the Product", ar: "تعرف على المنتج" },
-  "nav.description": { en: "Description", ar: "الوصف" },
+  "nav.product": { en: "Meet LumiPro", ar: "تعرف على لومي برو" },
+  "nav.description": { en: "LumiPro Features", ar: "مميزات لومي برو" },
   "nav.video": { en: "Video", ar: "الفيديو" },
   "nav.photos": { en: "Photos", ar: "الصور" },
   "nav.compatibility": { en: "Compatibility", ar: "التوافق" },
   "hero.cta": { en: "Learn More", ar: "اعرف المزيد" },
-  "product.title": { en: "Meet the Product", ar: "تعرف على المنتج" },
-  "description.title": { en: "Product Description", ar: "وصف المنتج" },
+  "product.title": { en: "Meet LumiPro", ar: "تعرف على لومي برو" },
+  "description.title": { en: "LumiPro Features", ar: "مميزات لومي برو" },
   "video.title": { en: "Watch it in Action", ar: "شاهده في العمل" },
-  "photos.title": { en: "Product Photos", ar: "صور المنتج" },
+  "photos.title": { en: "Product Footage & Results", ar: "لقطات المنتج والنتائج" },
   "compatibility.title": { en: "Compatibility", ar: "التوافق" },
   "contact.whatsapp": {
     en: "Contact us on WhatsApp",
     ar: "تواصل معنا على واتساب",
   },
   "contact.whatsapp.tooltip": { en: "Chat with us", ar: "تواصل معنا" },
-  // Add missing translations below
-  "product.feature.fast": { en: "Fast", ar: "سريع" },
-  "product.feature.fast.desc": {
-    en: "Lightning quick performance",
-    ar: "أداء سريع كالبرق",
+  // LumiPro specific features
+  "product.feature.precision": { en: "Precision Diffusion", ar: "انتشار الضوء بدقة" },
+  "product.feature.precision.desc": {
+    en: "Customized light softness, designed by dentists, for dentists.",
+    ar: "نعومة ضوء مخصصة، مصممة بواسطة أطباء الأسنان، لأطباء الأسنان.",
   },
-  "product.feature.friendly": { en: "User Friendly", ar: "سهل الاستخدام" },
-  "product.feature.friendly.desc": {
-    en: "Intuitive for all users",
-    ar: "بديهي لجميع المستخدمين",
+  "product.feature.durable": { en: "Ultra-Durable Build", ar: "بناء فائق المتانة" },
+  "product.feature.durable.desc": {
+    en: "Manufactured using premium material optimized opacity to ensure perfect light scattering and long-term durability.",
+    ar: "مُصنع باستخدام مواد ممتازة بشفافية محسنة لضمان تشتت مثالي للضوء ومتانة طويلة المدى.",
   },
-  "product.feature.customizable": { en: "Customizable", ar: "قابل للتخصيص" },
-  "product.feature.customizable.desc": {
-    en: "Adapt to your needs",
-    ar: "يتكيف مع احتياجاتك",
+  "product.feature.professional": { en: "Professional Results", ar: "نتائج احترافية" },
+  "product.feature.professional.desc": {
+    en: "Converts clinical lighting into studio-quality imaging—every shot, every time.",
+    ar: "يحول الإضاءة السريرية إلى تصوير بجودة الاستوديو—في كل لقطة، في كل مرة.",
   },
-  "product.feature.reliable": { en: "Reliable", ar: "موثوق" },
-  "product.feature.reliable.desc": {
-    en: "Consistent performance",
-    ar: "أداء متسق",
+  "product.feature.time": { en: "Your time is a priority", ar: "وقتك أولوية" },
+  "product.feature.time.desc": {
+    en: "Designed to save time and improve workflow.",
+    ar: "مصمم لتوفير الوقت وتحسين سير العمل.",
   },
   "product.premium": { en: "Premium Quality", ar: "جودة ممتازة" },
-  "description.feature.performance": {
-    en: "High Performance",
-    ar: "أداء عالي",
+  "description.feature.technology": {
+    en: "Innovative Technology",
+    ar: "تقنية مبتكرة",
   },
-  "description.feature.performance.desc": {
-    en: "Engineered for optimal performance in all conditions",
-    ar: "مصممة للأداء الأمثل في جميع الظروف",
+  "description.feature.technology.desc": {
+    en: "Engineered with layered diffusion, 3 different patterns for diffusion, you can totally choose the amount of diffusion, pattern and shape. Giving you full control over your image.",
+    ar: "مهندس بانتشار متدرج، 3 أنماط مختلفة للانتشار، يمكنك اختيار كمية الانتشار والنمط والشكل بالكامل. يمنحك السيطرة الكاملة على صورتك.",
   },
-  "description.feature.design": { en: "Thoughtful Design", ar: "تصميم مدروس" },
+  "description.feature.design": { en: "Sleek & Efficient", ar: "أنيق وفعال" },
   "description.feature.design.desc": {
-    en: "Carefully crafted with user experience in mind",
-    ar: "مصنوع بعناية مع مراعاة تجربة المستخدم",
+    en: "Lightweight yet stable, crafted to complement your precision work without compromise.",
+    ar: "خفيف الوزن لكن مستقر، مصنوع ليكمل عملك الدقيق بدون تنازل.",
   },
-  "description.feature.materials": {
-    en: "Quality Materials",
-    ar: "مواد عالية الجودة",
+  "description.feature.authority": {
+    en: "Authoritative Design",
+    ar: "تصميم معتمد",
   },
-  "description.feature.materials.desc": {
-    en: "Made with premium quality materials built to last",
-    ar: "مصنوعة من مواد عالية الجودة مصممة لتدوم",
+  "description.feature.authority.desc": {
+    en: "Developed by leaders in dental photography, trusted by experts across the field.",
+    ar: "طُور بواسطة رواد في تصوير الأسنان، موثوق به من قبل الخبراء في المجال.",
   },
   "footer.quicklinks": { en: "Quick Links", ar: "روابط سريعة" },
   "footer.contact": { en: "Contact Us", ar: "اتصل بنا" },
@@ -115,6 +115,8 @@ const translations: TranslationsType = {
   },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
   "product.view": { en: "View", ar: "عرض" },
+  "product.buynow": { en: "Buy Now", ar: "اشتري الآن" },
+  "feedbacks.title": { en: "What Dentists Are Saying", ar: "ماذا يقول أطباء الأسنان" },
 };
 
 export default function Home() {
@@ -165,46 +167,43 @@ export default function Home() {
   };
 
   const navItems = [
+    { id: "video", label: t("nav.video"), href: "#video" },
     { id: "product", label: t("nav.product"), href: "#product" },
-    { id: "description", label: t("nav.description"), href: "#description" },
+    { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
     { id: "photos", label: t("nav.photos"), href: "#photos" },
-    {
-      id: "compatibility",
-      label: t("nav.compatibility"),
-      href: "#compatibility",
-    },
+    { id: "compatibility", label: t("nav.compatibility"), href: "#compatibility" },
   ];
 
   const platforms = [
     {
-      name: "iOS",
+      name: "Godox MFR76",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11" />
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ),
     },
     {
-      name: "Android",
+      name: "Yongnuo YN14EX II",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-2.86-1.21-6.08-1.21-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52M7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5m10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5" />
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ),
     },
     {
-      name: "Windows",
+      name: "Canon Flash",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
     },
     {
-      name: "MacOS",
+      name: "Nikon Flash",
       icon: (
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 1c6.1 0 11 4.9 11 11s-4.9 11-11 11S1 18.1 1 12 5.9 1 12 1zm0 3.83c-2.94 0-5.35 2.35-5.35 5.24 0 2.83 2.3 5.17 5.35 5.17 3.05 0 5.35-2.34 5.35-5.17 0-2.89-2.41-5.24-5.35-5.24zm0 2.62c1.47 0 2.67 1.17 2.67 2.62 0 1.41-1.2 2.58-2.67 2.58-1.47 0-2.67-1.17-2.67-2.58 0-1.45 1.2-2.62 2.67-2.62z" />
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
     },
@@ -364,7 +363,7 @@ export default function Home() {
           <Button
             size="lg"
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-full"
-            onClick={() => scrollToSection("product")}
+            onClick={() => scrollToSection("video")}
           >
             {t("hero.cta")}
           </Button>
@@ -373,7 +372,7 @@ export default function Home() {
               variant="ghost"
               size="icon"
               className="text-white rounded-full"
-              onClick={() => scrollToSection("product")}
+              onClick={() => scrollToSection("video")}
             >
               <ChevronDown className="h-6 w-6" />
             </Button>
@@ -381,64 +380,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Section */}
-      <section id="product" className="py-16 lg:py-24 bg-white">
+      {/* Video Section */}
+      <section id="video" className="py-16 lg:py-24 bg-black">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
+            {t("video.title")}
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+              <iframe
+                src={content.videoUrl.includes('youtube.com') || content.videoUrl.includes('youtu.be') 
+                  ? content.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/').split('&')[0]
+                  : content.videoUrl}
+                title="LumiPro Video"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Section */}
+      <section id="product" className="py-16 lg:py-24 bg-black">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-white">
             {t("product.title")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <p className="text-lg mb-6">{content.productDescription}</p>
-              <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2">
+              <p className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
+                {content.productDescription}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-8 h-8"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                          clipRule="evenodd"
-                        ></path>
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold">{t("product.feature.fast")}</h3>
-                    <p className="text-sm text-gray-600">
-                      {t("product.feature.fast.desc")}
-                    </p>
+                    <h3 className="font-bold text-sm mb-1">{t("product.feature.precision")}</h3>
+                    <p className="text-xs text-gray-600">{t("product.feature.precision.desc")}</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-8 h-8"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold">
-                      {t("product.feature.friendly")}
+                    <h3 className="font-bold text-sm mb-1">
+                      {t("product.feature.durable")}
                     </h3>
-                    <p className="text-sm text-gray-600">
-                      {t("product.feature.friendly.desc")}
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.durable.desc")}
                     </p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-8 h-8"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
                           d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
@@ -446,22 +452,18 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold">
-                      {t("product.feature.customizable")}
+                    <h3 className="font-bold text-sm mb-1">
+                      {t("product.feature.professional")}
                     </h3>
-                    <p className="text-sm text-gray-600">
-                      {t("product.feature.customizable.desc")}
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.professional.desc")}
                     </p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4">
                     <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-8 h-8"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
                           d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -469,127 +471,206 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <h3 className="font-bold">
-                      {t("product.feature.reliable")}
+                    <h3 className="font-bold text-sm mb-1">
+                      {t("product.feature.time")}
                     </h3>
-                    <p className="text-sm text-gray-600">
-                      {t("product.feature.reliable.desc")}
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.time.desc")}
                     </p>
                   </CardContent>
                 </Card>
               </div>
             </div>
-            <div className="relative">
-              <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+            <div className="lg:col-span-1">
+              <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 relative">
                 <Image
-                  src={
-                    content.photos[0] ||
-                    "https://source.unsplash.com/random/600x800/?product"
-                  }
+                  src={content.photos[0] || "https://source.unsplash.com/random/400x500/?product"}
                   alt="Product"
-                  width={600}
-                  height={800}
+                  width={400}
+                  height={500}
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-white text-xl font-bold">
-                    {content.productName}
-                  </h3>
-                  <p className="text-gray-200">{t("product.premium")}</p>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <h3 className="text-white text-lg font-bold">{content.productName}</h3>
+                  <p className="text-gray-200 text-sm">{t("product.premium")}</p>
                 </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Continue with product description */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-gray-900 rounded-lg shadow-lg p-8">
+              <p className="text-xl text-gray-200 leading-relaxed whitespace-pre-line text-center">
+                {content.productDetailedDescription}
+              </p>
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                  <CardContent className="p-4">
+                    <div className="text-orange-500 mb-2">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-sm mb-1">{t("product.feature.precision")}</h3>
+                    <p className="text-xs text-gray-600">{t("product.feature.precision.desc")}</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                  <CardContent className="p-4">
+                    <div className="text-orange-500 mb-2">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-sm mb-1">
+                      {t("product.feature.durable")}
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.durable.desc")}
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                  <CardContent className="p-4">
+                    <div className="text-orange-500 mb-2">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-sm mb-1">
+                      {t("product.feature.professional")}
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.professional.desc")}
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+                  <CardContent className="p-4">
+                    <div className="text-orange-500 mb-2">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-sm mb-1">
+                      {t("product.feature.time")}
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      {t("product.feature.time.desc")}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              
+              {/* Buy Now Button */}
+              <div className="mt-12 text-center">
+                <a
+                  href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  {t("product.buynow")}
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Description Section */}
-      <section id="description" className="py-16 lg:py-24 bg-gray-100">
+      {/* Feedbacks Section */}
+      <section id="feedbacks" className="py-16 lg:py-24 bg-black">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
-              {t("description.title")}
-            </h2>
-            <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
-              <p className="text-lg leading-relaxed whitespace-pre-line">
-                {content.productDetailedDescription}
-              </p>
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex flex-col items-center text-center p-4 bg-orange-50 rounded-lg">
-                  <div className="bg-orange-100 rounded-full p-3 mb-4">
-                    <svg
-                      className="w-8 h-8 text-orange-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M13 7H7v6h6V7z" />
-                      <path
-                        fillRule="evenodd"
-                        d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">
-                    {t("description.feature.performance")}
-                  </h3>
-                  <p className="text-gray-600">
-                    {t("description.feature.performance.desc")}
-                  </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
+            {t("feedbacks.title")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            {/* Feedback 1 */}
+            <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold text-lg">AH</span>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 bg-orange-50 rounded-lg">
-                  <div className="bg-orange-100 rounded-full p-3 mb-4">
-                    <svg
-                      className="w-8 h-8 text-orange-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">
-                    {t("description.feature.design")}
-                  </h3>
-                  <p className="text-gray-600">
-                    {t("description.feature.design.desc")}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center text-center p-4 bg-orange-50 rounded-lg">
-                  <div className="bg-orange-100 rounded-full p-3 mb-4">
-                    <svg
-                      className="w-8 h-8 text-orange-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">
-                    {t("description.feature.materials")}
-                  </h3>
-                  <p className="text-gray-600">
-                    {t("description.feature.materials.desc")}
-                  </p>
+                <div>
+                  <h3 className="text-white font-semibold">Dr. Ahmed Hassan</h3>
+                  <p className="text-gray-400 text-sm">Cosmetic Dentist</p>
                 </div>
               </div>
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-300 italic">
+                "LumiPro has completely transformed my dental photography. The precision and control it offers is unmatched. My patients love seeing their results in such clear, professional images."
+              </p>
+            </div>
+
+            {/* Feedback 2 */}
+            <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold text-lg">SM</span>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">Dr. Sarah Mohamed</h3>
+                  <p className="text-gray-400 text-sm">Orthodontist</p>
+                </div>
+              </div>
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-300 italic">
+                "The three diffusion patterns give me incredible flexibility. Whether I'm documenting orthodontic progress or showcasing final results, LumiPro delivers studio-quality images every time."
+              </p>
+            </div>
+
+            {/* Feedback 3 */}
+            <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold text-lg">KA</span>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">Dr. Khaled Ali</h3>
+                  <p className="text-gray-400 text-sm">Oral Surgeon</p>
+                </div>
+              </div>
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-300 italic">
+                "As a professional who demands excellence, LumiPro exceeds my expectations. The build quality is exceptional and it saves me significant time in my workflow. Highly recommended!"
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Photos Section */}
-      <section id="photos" className="py-16 lg:py-24 bg-gray-100">
+      <section id="photos" className="py-16 lg:py-24 bg-black">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
             {t("photos.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
@@ -619,14 +700,14 @@ export default function Home() {
       </section>
 
       {/* Compatibility Section */}
-      <section id="compatibility" className="py-16 lg:py-24 bg-white">
+      <section id="compatibility" className="py-16 lg:py-24 bg-black">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
             {t("compatibility.title")}
           </h2>
           <div className="max-w-4xl mx-auto mt-8">
-            <div className="bg-gradient-to-br from-gray-50 to-orange-50 rounded-lg shadow-lg p-8 border border-orange-100">
-              <p className="text-lg mb-8 text-center">
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-lg p-8 border border-orange-500">
+              <p className="text-lg mb-8 text-center text-gray-200">
                 {content.compatibilityText}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
@@ -635,10 +716,10 @@ export default function Home() {
                     key={platform.name}
                     className="flex flex-col items-center"
                   >
-                    <div className="bg-white p-4 rounded-full shadow-md text-orange-500 mb-3">
+                    <div className="bg-orange-500 p-4 rounded-full shadow-md text-white mb-3">
                       {platform.icon}
                     </div>
-                    <span className="font-semibold">{platform.name}</span>
+                    <span className="font-semibold text-white">{platform.name}</span>
                   </div>
                 ))}
               </div>
