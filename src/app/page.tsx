@@ -582,6 +582,69 @@ export default function Home() {
                 </Card>
               </div>
 
+              {/* Photos Section */}
+              <section id="photos" className="py-16 lg:py-24 bg-black">
+                <div className="container mx-auto px-6 md:px-8 lg:px-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
+                    {t("photos.title")}
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    {content.photos.map((photo, index) => (
+                      <div
+                        key={index}
+                        className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+                      >
+                        <Image
+                          src={photo}
+                          alt={`Product photo ${index + 1}`}
+                          width={800}
+                          height={600}
+                          className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                          <h3 className="text-white text-lg font-semibold">
+                            {`${t("product.name")} - ${t("product.view")} ${
+                              index + 1
+                            }`}
+                          </h3>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* Compatibility Section */}
+              <section id="compatibility" className="py-16 lg:py-24 bg-black">
+                <div className="container mx-auto px-6 md:px-8 lg:px-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
+                    {t("compatibility.title")}
+                  </h2>
+                  <div className="max-w-4xl mx-auto mt-8">
+                    <div className="bg-black rounded-lg shadow-lg p-8 border border-orange-500">
+                      <p className="text-lg mb-8 text-center text-white">
+                        {t("compatibility.text")}
+                      </p>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+                        {platforms.map((platform) => (
+                          <div
+                            key={platform.name}
+                            className="flex flex-col items-center"
+                          >
+                            <div className="bg-orange-500 p-4 rounded-full shadow-md text-white mb-3">
+                              {platform.icon}
+                            </div>
+                            <span className="font-semibold text-white">
+                              {platform.name}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               {/* Buy Now Button */}
               <div className="mt-12 text-center">
                 <a
@@ -697,69 +760,6 @@ export default function Home() {
                 my expectations. The build quality is exceptional and it saves
                 me significant time in my workflow. Highly recommended!&rdquo;
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Photos Section */}
-      <section id="photos" className="py-16 lg:py-24 bg-black">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
-            {t("photos.title")}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {content.photos.map((photo, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
-              >
-                <Image
-                  src={photo}
-                  alt={`Product photo ${index + 1}`}
-                  width={800}
-                  height={600}
-                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <h3 className="text-white text-lg font-semibold">
-                    {`${t("product.name")} - ${t("product.view")} ${
-                      index + 1
-                    }`}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compatibility Section */}
-      <section id="compatibility" className="py-16 lg:py-24 bg-black">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
-            {t("compatibility.title")}
-          </h2>
-          <div className="max-w-4xl mx-auto mt-8">
-            <div className="bg-black rounded-lg shadow-lg p-8 border border-orange-500">
-              <p className="text-lg mb-8 text-center text-white">
-                {t("compatibility.text")}
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
-                {platforms.map((platform) => (
-                  <div
-                    key={platform.name}
-                    className="flex flex-col items-center"
-                  >
-                    <div className="bg-orange-500 p-4 rounded-full shadow-md text-white mb-3">
-                      {platform.icon}
-                    </div>
-                    <span className="font-semibold text-white">
-                      {platform.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
