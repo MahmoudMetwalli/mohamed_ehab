@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown, Globe } from "lucide-react";
 
 interface ContentType {
@@ -184,7 +183,7 @@ const translations: TranslationsType = {
 };
 
 export default function Home() {
-  const [content, setContent] = useState<ContentType>(defaultContent);
+  const content = defaultContent;
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
