@@ -614,7 +614,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 italic">
-                "LumiPro has completely transformed my dental photography. The precision and control it offers is unmatched. My patients love seeing their results in such clear, professional images."
+                &ldquo;LumiPro has completely transformed my dental photography. The precision and control it offers is unmatched. My patients love seeing their results in such clear, professional images.&rdquo;
               </p>
             </div>
 
@@ -637,7 +637,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 italic">
-                "The three diffusion patterns give me incredible flexibility. Whether I'm documenting orthodontic progress or showcasing final results, LumiPro delivers studio-quality images every time."
+                &ldquo;The three diffusion patterns give me incredible flexibility. Whether I&apos;m documenting orthodontic progress or showcasing final results, LumiPro delivers studio-quality images every time.&rdquo;
               </p>
             </div>
 
@@ -660,7 +660,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 italic">
-                "As a professional who demands excellence, LumiPro exceeds my expectations. The build quality is exceptional and it saves me significant time in my workflow. Highly recommended!"
+                &ldquo;As a professional who demands excellence, LumiPro exceeds my expectations. The build quality is exceptional and it saves me significant time in my workflow. Highly recommended!&rdquo;
               </p>
             </div>
           </div>
