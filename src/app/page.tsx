@@ -113,6 +113,14 @@ const translations: TranslationsType = {
     en: "Developed by leaders in dental photography, trusted by experts across the field.",
     ar: "طُور بواسطة رواد في تصوير الأسنان، موثوق به من قبل الخبراء في المجال.",
   },
+  "description.feature.compatibility": {
+    en: "Seamless Compatibility",
+    ar: "توافق سلس",
+  },
+  "description.feature.compatibility.desc": {
+    en: "Tailored to integrate perfectly with top flash systems like the Godox MFR76 and Yongnuo YN14EX II.",
+    ar: "مصمم للتكامل المثالي مع أنظمة الفلاش الأفضل مثل Godox MFR76 و Yongnuo YN14EX II.",
+  },
 
   // Video Section
   "video.title": { en: "Watch it in Action", ar: "شاهده في العمل" },
@@ -207,6 +215,7 @@ export default function Home() {
   const navItems = [
     { id: "video", label: t("nav.video"), href: "#video" },
     { id: "product", label: t("nav.product"), href: "#product" },
+    { id: "description", label: t("nav.description"), href: "#description" },
     { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
     { id: "photos", label: t("nav.photos"), href: "#photos" },
     {
@@ -454,133 +463,239 @@ export default function Home() {
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-white">
             {t("product.title")}
           </h2>
+
           <div className="flex flex-col items-center">
             <div className="text-center max-w-4xl">
               <p className="text-xl lg:text-2xl mb-12 text-white leading-relaxed">
                 {t("product.description")}
               </p>
             </div>
-            <div className="max-w-md">
-              <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 relative">
-                <Image
-                  src={
-                    content.photos[0] ||
-                    "https://source.unsplash.com/random/300x400/?product"
-                  }
-                  alt="Product"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-4">
-                  <h3 className="text-white text-lg font-bold">
-                    {t("product.name")}
-                  </h3>
-                  <p className="text-gray-200 text-sm">
-                    {t("product.premium")}
-                  </p>
+            <div className="mt-16 max-w-4xl mx-auto">
+              <div className="bg-black rounded-lg shadow-lg p-8">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <Card className="bg-white border-orange-200">
+                    <CardContent className="p-4">
+                      <div className="text-orange-500 mb-2">
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <h3 className="font-bold text-sm mb-1 text-black">
+                        {t("product.feature.precision")}
+                      </h3>
+                      <p className="text-xs text-gray-600">
+                        {t("product.feature.precision.desc")}
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-white border-orange-200">
+                    <CardContent className="p-4">
+                      <div className="text-orange-500 mb-2">
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                        </svg>
+                      </div>
+                      <h3 className="font-bold text-sm mb-1 text-black">
+                        {t("product.feature.durable")}
+                      </h3>
+                      <p className="text-xs text-gray-600">
+                        {t("product.feature.durable.desc")}
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-white border-orange-200">
+                    <CardContent className="p-4">
+                      <div className="text-orange-500 mb-2">
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <h3 className="font-bold text-sm mb-1 text-black">
+                        {t("product.feature.professional")}
+                      </h3>
+                      <p className="text-xs text-gray-600">
+                        {t("product.feature.professional.desc")}
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-white border-orange-200">
+                    <CardContent className="p-4">
+                      <div className="text-orange-500 mb-2">
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <h3 className="font-bold text-sm mb-1 text-black">
+                        {t("product.feature.time")}
+                      </h3>
+                      <p className="text-xs text-gray-600">
+                        {t("product.feature.time.desc")}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="max-w-md">
+                  <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 relative">
+                    <Image
+                      src={
+                        content.photos[0] ||
+                        "https://source.unsplash.com/random/300x400/?product"
+                      }
+                      alt="Product"
+                      width={300}
+                      height={400}
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 p-4">
+                      <h3 className="text-white text-lg font-bold">
+                        {t("product.name")}
+                      </h3>
+                      <p className="text-gray-200 text-sm">
+                        {t("product.premium")}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Continue with product description */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <div className="bg-black rounded-lg shadow-lg p-8">
-              <p className="text-xl text-white leading-relaxed whitespace-pre-line text-center">
-                {t("product.detailed.description")}
-              </p>
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="bg-white border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1 text-black">
-                      {t("product.feature.precision")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.precision.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1 text-black">
-                      {t("product.feature.durable")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.durable.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1 text-black">
-                      {t("product.feature.professional")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.professional.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white border-orange-200">
-                  <CardContent className="p-4">
-                    <div className="text-orange-500 mb-2">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-sm mb-1 text-black">
-                      {t("product.feature.time")}
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      {t("product.feature.time.desc")}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
+              {/* Product Description Section */}
+              <section id="description" className="py-16 lg:py-24 bg-black">
+                <div className="container mx-auto px-6 md:px-8 lg:px-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
+                    {t("description.title")}
+                  </h2>
+                  <p className="text-xl text-white leading-relaxed whitespace-pre-line text-center">
+                    {t("product.detailed.description")}
+                  </p>
+                  <br className="my-8 border-t border-gray-700" />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    {/* Feature Card 1 - Innovative Technology */}
+                    <Card className="bg-white border-orange-200">
+                      <CardContent className="p-6">
+                        <div className="text-orange-500 mb-4">
+                          <svg
+                            className="w-8 h-8"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                              clipRule="evenodd"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-lg mb-3 text-black">
+                          {t("description.feature.technology")}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {t("description.feature.technology.desc")}
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    {/* Feature Card 2 - Sleek & Efficient */}
+                    <Card className="bg-white border-orange-200">
+                      <CardContent className="p-6">
+                        <div className="text-orange-500 mb-4">
+                          <svg
+                            className="w-8 h-8"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-lg mb-3 text-black">
+                          {t("description.feature.design")}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {t("description.feature.design.desc")}
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    {/* Feature Card 3 - Authoritative Design */}
+                    <Card className="bg-white border-orange-200">
+                      <CardContent className="p-6">
+                        <div className="text-orange-500 mb-4">
+                          <svg
+                            className="w-8 h-8"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                              clipRule="evenodd"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-lg mb-3 text-black">
+                          {t("description.feature.authority")}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {t("description.feature.authority.desc")}
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    {/* Feature Card 4 - Seamless Compatibility */}
+                    <Card className="bg-white border-orange-200">
+                      <CardContent className="p-6">
+                        <div className="text-orange-500 mb-4">
+                          <svg
+                            className="w-8 h-8"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-lg mb-3 text-black">
+                          {t("description.feature.compatibility")}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {t("description.feature.compatibility.desc")}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </section>
 
               {/* Photos Section */}
               <section id="photos" className="py-16 lg:py-24 bg-black">
@@ -610,37 +725,6 @@ export default function Home() {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-              </section>
-
-              {/* Compatibility Section */}
-              <section id="compatibility" className="py-16 lg:py-24 bg-black">
-                <div className="container mx-auto px-6 md:px-8 lg:px-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
-                    {t("compatibility.title")}
-                  </h2>
-                  <div className="max-w-4xl mx-auto mt-8">
-                    <div className="bg-black rounded-lg shadow-lg p-8 border border-orange-500">
-                      <p className="text-lg mb-8 text-center text-white">
-                        {t("compatibility.text")}
-                      </p>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
-                        {platforms.map((platform) => (
-                          <div
-                            key={platform.name}
-                            className="flex flex-col items-center"
-                          >
-                            <div className="bg-orange-500 p-4 rounded-full shadow-md text-white mb-3">
-                              {platform.icon}
-                            </div>
-                            <span className="font-semibold text-white">
-                              {platform.name}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </div>
               </section>
