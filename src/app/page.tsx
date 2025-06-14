@@ -38,7 +38,6 @@ const translations: TranslationsType = {
   "nav.description": { en: "LumiPro Features", ar: "مميزات لومي برو" },
   "nav.video": { en: "Video", ar: "الفيديو" },
   "nav.photos": { en: "Photos", ar: "الصور" },
-  "nav.compatibility": { en: "Compatibility", ar: "التوافق" },
 
   // Hero Section
   "hero.cta": { en: "Learn More", ar: "اعرف المزيد" },
@@ -118,7 +117,8 @@ const translations: TranslationsType = {
   },
   "description.feature.compatibility.desc": {
     en: "Tailored to integrate perfectly with top flash systems like the Godox MFR76 and Yongnuo YN14EX II.",
-    ar: "مصمم للتكامل المثالي مع أنظمة الفلاش الأفضل مثل Godox MFR76 و Yongnuo YN14EX II.",
+    ar: "مصمم للتكامل المثالي مع أنظمة الفلاش الأفضل مثل \
+    Godox MFR76 و Yongnuo YN14EX II",
   },
 
   // Video Section
