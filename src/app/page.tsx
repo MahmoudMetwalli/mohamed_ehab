@@ -8,6 +8,7 @@ import { ChevronDown, Globe } from "lucide-react";
 interface ContentType {
   videoUrl: string;
   whatsappNumber: string;
+  luminProPhotos: string[];
   photos: string[];
   logoUrl: string;
 }
@@ -23,27 +24,25 @@ const defaultContent: ContentType = {
   videoUrl:
     "https://www.youtube.com/watch?v=7sKfVjz3AkY&pp=ygUOZGVudGFsIGNvbnRlbnQ%3D",
   whatsappNumber: "+201093044708",
+  luminProPhotos: [
+    "/DSC_4872.jpg",
+    "/DSC_4864.jpg",
+    "/DSC_4894.jpg",
+  ],
   photos: [
-    "/DSC_4467.jpg",
-    "/DSC_4468.jpg",
-    "/DSC_4479.jpg",
-    "/DSC_4481.jpg",
-    "/DSC_4483.jpg",
-    "/DSC_4487.jpg",
-    "/DSC_4497.jpg",
-    "/DSC_4499.jpg",
-    "/DSC_4504.jpg",
-    "/DSC_4509.jpg",
-    "/DSC_4520.jpg",
-    "/DSC_4542.jpg",
-    "/DSC_4544.jpg",
-    "/DSC_4569.jpg",
-    "/DSC_4575.jpg",
-    "/DSC_4588.jpg",
-    "/DSC_4594.jpg",
-    "/DSC_4604.jpg",
-    "/DSC_4612.jpg",
-    "/DSC_4633.jpg",
+    "/B.jpg",
+    "/A.jpg",
+    "/1.jpg",
+    "/4.jpg",
+    "/6.jpg",
+    "/8.jpg",
+    "/10.jpg",
+    "/2.jpg",
+    "/3.jpg",
+    "/11.jpg",
+    "/12.jpg",
+    "/13.jpg",
+    "/15.jpg",
   ],
   logoUrl: "/Untitled-1.png", // Updated to use the new logo
 };
@@ -308,9 +307,9 @@ export default function Home() {
             <Image
               src={content.logoUrl}
               alt="Logo"
-              width={120}
+              width={40}
               height={40}
-              className="h-8"
+              className="h-10 w-10 object-contain"
             />
           </a>
           <nav className="hidden md:flex space-x-4 items-center">
@@ -570,16 +569,16 @@ export default function Home() {
                 </div>
                 <div className="mt-10 max-w-sm mx-auto">
                   <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  {content.luminProPhotos.map((photo, index) => (
                     <Image
-                      src={
-                        content.photos[0] ||
-                        "https://source.unsplash.com/random/300x400/?product"
-                      }
+                      key={index}
+                      src={photo}
                       alt="Product"
                       width={300}
                       height={400}
                       className="w-full h-auto"
                     />
+                  ))}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-4">
                       <h3 className="text-white text-lg font-semibold">
@@ -869,9 +868,9 @@ export default function Home() {
               <Image
                 src={content.logoUrl}
                 alt="Logo"
-                width={120}
+                width={40}
                 height={40}
-                className={`h-8 mb-4 ${language === 'ar' ? 'md:ml-auto' : ''}`} // Aligns image to right in AR on md+
+                className={`h-10 w-10 object-contain mb-4 ${language === 'ar' ? 'md:ml-auto' : ''}`}
               />
               <p className="text-sm text-gray-400 leading-relaxed">
                 {t("footer.description")}
