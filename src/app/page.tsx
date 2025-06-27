@@ -263,7 +263,7 @@ export default function Home() {
   };
 
   const navItems = [
-    { id: "video", label: t("nav.video"), href: "#video" },
+    // { id: "video", label: t("nav.video"), href: "#video" },
     { id: "product", label: t("nav.product"), href: "#product" },
     { id: "description", label: t("nav.description"), href: "#description" },
     { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
