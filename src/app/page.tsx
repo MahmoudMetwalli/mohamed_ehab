@@ -30,14 +30,15 @@ const defaultContent: ContentType = {
     "/DSC_4894.jpg",
   ],
   photos: [
-    "/B.jpg",
-    "/A.jpg",
+    "/IMG_6057.JPG",
+    "/IMG_6083.JPG",
+    "/IMG_6058.JPG",
+    "/IMG_6084.JPG",
     "/1.jpg",
     "/4.JPG",
     "/6.JPG",
     "/8.JPG",
     "/10.JPG",
-    "/2.JPG",
     "/3.jpg",
     "/11.jpg",
     "/12.jpg",
@@ -794,7 +795,7 @@ export default function Home() {
                           alt={`Product photo ${index + 1}`}
                           width={400}
                           height={300}
-                          className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105 bg-gray-900"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                           <h3 className="text-white text-base font-semibold">
