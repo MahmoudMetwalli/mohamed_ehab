@@ -37,7 +37,7 @@ const defaultContent: ContentType = {
     "/6.jpg",
     "/8.jpg",
     "/10.jpg",
-    "/2.jpg",
+    "/2.JPG",
     "/3.jpg",
     "/11.jpg",
     "/12.jpg",
