@@ -24,12 +24,28 @@ const defaultContent: ContentType = {
     "https://www.youtube.com/watch?v=7sKfVjz3AkY&pp=ygUOZGVudGFsIGNvbnRlbnQ%3D",
   whatsappNumber: "+201093044708",
   photos: [
-    "/DSC_0310-2.jpg",
-    "/DSC_0374.jpg",
-    "/DSC_0310-2.jpg",
-    "/DSC_0374.jpg",
+    "/DSC_4467.jpg",
+    "/DSC_4468.jpg",
+    "/DSC_4479.jpg",
+    "/DSC_4481.jpg",
+    "/DSC_4483.jpg",
+    "/DSC_4487.jpg",
+    "/DSC_4497.jpg",
+    "/DSC_4499.jpg",
+    "/DSC_4504.jpg",
+    "/DSC_4509.jpg",
+    "/DSC_4520.jpg",
+    "/DSC_4542.jpg",
+    "/DSC_4544.jpg",
+    "/DSC_4569.jpg",
+    "/DSC_4575.jpg",
+    "/DSC_4588.jpg",
+    "/DSC_4594.jpg",
+    "/DSC_4604.jpg",
+    "/DSC_4612.jpg",
+    "/DSC_4633.jpg",
   ],
-  logoUrl: "/DSC_0310-2.jpg",
+  logoUrl: "/Untitled-1.png", // Updated to use the new logo
 };
 
 const translations: TranslationsType = {
@@ -188,6 +204,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const t = (key: string): string => translations[key]?.[language] || key;
 
@@ -219,6 +236,27 @@ export default function Home() {
       document.documentElement.style.scrollBehavior = "";
     };
   }, []);
+
+  // Handle escape key to close modal
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+
+    if (selectedImage) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedImage]);
 
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "ar" : "en");
@@ -360,7 +398,7 @@ export default function Home() {
         )}
       </header>
 
-      {/* Video Section */}
+      {/* Video Section
       <section id="video" className="py-16 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
@@ -387,7 +425,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Hero Section */}
       <section
@@ -450,10 +488,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                      <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                      <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.precision")}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed">
+                      <p className="text-base text-gray-100 leading-relaxed font-medium">
                         {t("product.feature.precision.desc")}
                       </p>
                     </div>
@@ -471,10 +509,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                      <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                      <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.durable")}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed">
+                      <p className="text-base text-gray-100 leading-relaxed font-medium">
                         {t("product.feature.durable.desc")}
                       </p>
                     </div>
@@ -496,10 +534,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                      <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                      <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.professional")}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed">
+                      <p className="text-base text-gray-100 leading-relaxed font-medium">
                         {t("product.feature.professional.desc")}
                       </p>
                     </div>
@@ -521,10 +559,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                      <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                      <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.time")}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed">
+                      <p className="text-base text-gray-100 leading-relaxed font-medium">
                         {t("product.feature.time.desc")}
                       </p>
                     </div>
@@ -564,7 +602,7 @@ export default function Home() {
                   <p className="text-lg text-gray-200 leading-relaxed whitespace-pre-line text-center max-w-3xl mx-auto">
                     {t("product.detailed.description")}
                   </p>
-                  <div className="mt-12 space-y-8 max-w-3xl mx-auto"> {/* Changed from grid to space-y */}
+                  <div className="mt-12 space-y-8 max-w-3xl mx-auto">
                     {/* Feature 1: Innovative Technology */}
                     <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse text-right' : 'text-left'} space-x-4`}>
                       <div className="flex-shrink-0 text-orange-400 mt-1">
@@ -573,10 +611,10 @@ export default function Home() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                        <h3 className="text-xl font-bold text-white mb-2">
                           {t("description.feature.technology")}
                         </h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
+                        <p className="text-base text-gray-100 leading-relaxed font-medium">
                           {t("description.feature.technology.desc")}
                         </p>
                       </div>
@@ -590,10 +628,10 @@ export default function Home() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                        <h3 className="text-xl font-bold text-white mb-2">
                           {t("description.feature.design")}
                         </h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
+                        <p className="text-base text-gray-100 leading-relaxed font-medium">
                           {t("description.feature.design.desc")}
                         </p>
                       </div>
@@ -607,10 +645,10 @@ export default function Home() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                        <h3 className="text-xl font-bold text-white mb-2">
                           {t("description.feature.authority")}
                         </h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
+                        <p className="text-base text-gray-100 leading-relaxed font-medium">
                           {t("description.feature.authority.desc")}
                         </p>
                       </div>
@@ -624,10 +662,10 @@ export default function Home() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                        <h3 className="text-xl font-bold text-white mb-2">
                           {t("description.feature.compatibility")}
                         </h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
+                        <p className="text-base text-gray-100 leading-relaxed font-medium">
                           {t("description.feature.compatibility.desc")}
                         </p>
                       </div>
@@ -749,7 +787,8 @@ export default function Home() {
                     {content.photos.map((photo, index) => (
                       <div
                         key={index}
-                        className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                        className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                        onClick={() => setSelectedImage(photo)}
                       >
                         <Image
                           src={photo}
@@ -764,6 +803,12 @@ export default function Home() {
                               index + 1
                             }`}
                           </h3>
+                        </div>
+                        {/* Click indicator */}
+                        <div className="absolute top-4 right-4 bg-black/50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                          </svg>
                         </div>
                       </div>
                     ))}
@@ -787,28 +832,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WhatsApp Button */}
-      <div className="fixed bottom-4 right-4 z-50 group">
-        <a
-          href={`https://wa.me/${content.whatsappNumber}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-full shadow-md transition-all duration-300 group-hover:scale-105 group-hover:pr-3"
-          aria-label="WhatsApp"
-          title={t("contact.whatsapp")}
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
         >
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              fillRule="evenodd"
-              d="M20.473 3.527C18.192 1.247 15.198 0 12.007 0c-6.583 0-11.94 5.356-11.94 11.94a11.91 11.91 0 001.592 5.98L0 24l6.193-1.624a11.91 11.91 0 005.738 1.464h.005c6.583 0 11.94-5.356 11.94-11.94 0-3.196-1.245-6.194-3.403-8.373zm-8.466 18.36h-.004a9.884 9.884 0 01-5.045-1.383l-.36-.216-3.744.982.999-3.648-.237-.378a9.92 9.92 0 01-1.514-5.296c0-5.473 4.454-9.928 9.932-9.928a9.87 9.87 0 017.029 2.91 9.87 9.87 0 012.91 7.028c0 5.472-4.455 9.928-9.966 9.928zm5.442-7.442c-.3-.15-1.773-.874-2.048-.973-.275-.099-.475-.149-.676.15-.2.299-.774.973-.95 1.174-.175.201-.35.225-.65.075-.3-.15-1.266-.467-2.414-1.486-.891-.794-1.5-1.775-1.676-2.074-.175-.299-.019-.46.132-.608.135-.133.3-.347.45-.521.15-.174.2-.298.3-.497.1-.2.05-.374-.025-.523-.075-.149-.675-1.629-.927-2.23-.243-.584-.49-.5-.675-.51-.174-.008-.375-.01-.575-.01-.2 0-.524.074-.8.373-.275.299-1.05 1.024-1.05 2.498 0 1.474 1.075 2.898 1.225 3.097.15.2 2.125 3.248 5.14 4.553.718.31 1.28.495 1.718.636.722.225 1.379.194 1.896.118.578-.087 1.778-.727 2.03-1.43.25-.703.25-1.304.175-1.43-.075-.125-.275-.2-.575-.35z"
-              clipRule="evenodd"
+          <div className="relative max-w-7xl max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200"
+              aria-label="Close image"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Expanded product image"
+              width={1200}
+              height={800}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
             />
-          </svg>
-          <span className="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-500 ease-in-out text-sm">
-            {t("contact.whatsapp.tooltip")}
-          </span>
-        </a>
-      </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="bg-black text-gray-200 py-10">
@@ -899,6 +949,29 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Button */}
+      <div className="fixed bottom-4 right-4 z-50 group">
+        <a
+          href={`https://wa.me/${content.whatsappNumber}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-full shadow-md transition-all duration-300 group-hover:scale-105 group-hover:pr-3"
+          aria-label="WhatsApp"
+          title={t("contact.whatsapp")}
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              fillRule="evenodd"
+              d="M20.473 3.527C18.192 1.247 15.198 0 12.007 0c-6.583 0-11.94 5.356-11.94 11.94a11.91 11.91 0 001.592 5.98L0 24l6.193-1.624a11.91 11.91 0 005.738 1.464h.005c6.583 0 11.94-5.356 11.94-11.94 0-3.196-1.245-6.194-3.403-8.373zm-8.466 18.36h-.004a9.884 9.884 0 01-5.045-1.383l-.36-.216-3.744.982.999-3.648-.237-.378a9.92 9.92 0 01-1.514-5.296c0-5.473 4.454-9.928 9.932-9.928a9.87 9.87 0 017.029 2.91 9.87 9.87 0 012.91 7.028c0 5.472-4.455 9.928-9.966 9.928zm5.442-7.442c-.3-.15-1.773-.874-2.048-.973-.275-.099-.475-.149-.676.15-.2.299-.774.973-.95 1.174-.175.201-.35.225-.65.075-.3-.15-1.266-.467-2.414-1.486-.891-.794-1.5-1.775-1.676-2.074-.175-.299-.019-.46.132-.608.135-.133.3-.347.45-.521.15-.174.2-.298.3-.497.1-.2.05-.374-.025-.523-.075-.149-.675-1.629-.927-2.23-.243-.584-.49-.5-.675-.51-.174-.008-.375-.01-.575-.01-.2 0-.524.074-.8.373-.275.299-1.05 1.024-1.05 2.498 0 1.474 1.075 2.898 1.225 3.097.15.2 2.125 3.248 5.14 4.553.718.31 1.28.495 1.718.636.722.225 1.379.194 1.896.118.578-.087 1.778-.727 2.03-1.43.25-.703.25-1.304.175-1.43-.075-.125-.275-.2-.575-.35z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-500 ease-in-out text-sm">
+            {t("contact.whatsapp.tooltip")}
+          </span>
+        </a>
+      </div>
     </div>
   );
 }

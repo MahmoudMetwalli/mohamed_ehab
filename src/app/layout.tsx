@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohamed Ehab Dental Product",
-  description: "Landing Page for Dental Product",
+  title: "LumiPro",
+  description: "LumiPro is a light diffuser transforming harsh flash light into soft, balanced illumination enhancing the detail, color accuracy, and depth in every photo.\n\nWhether you're documenting for records, showcasing aesthetics, or building your brand, this tool gives you total control over your image",
+  icons: {
+    icon: '/Untitled-1.png',
+  },
 };
 
 export default function RootLayout({
