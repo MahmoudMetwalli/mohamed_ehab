@@ -430,29 +430,21 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-screen bg-black flex items-center justify-center relative"
+        className="h-[60vh] bg-black flex items-center justify-center relative"
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center relative z-10">
-          <h1 className="text-7xl sm:text-9xl lg:text-10xl font-bold mb-6 text-white">
-            {t("product.name")}
-          </h1>
-          <Button
-            size="lg"
-            className="bg-orange-400 hover:bg-orange-500 text-white px-10 py-3 rounded-full"
-            onClick={() => scrollToSection("product")}
-          >
-            {t("hero.cta")}
-          </Button>
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white rounded-full"
-              onClick={() => scrollToSection("product")}
-            >
-              <ChevronDown className="h-5 w-5" />
-            </Button>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <Image
+              src={content.logoUrl}
+              alt="Logo"
+              width={80}
+              height={80}
+              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain"
+            />
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
+              {t("product.name")}
+            </h1>
           </div>
         </div>
       </section>
