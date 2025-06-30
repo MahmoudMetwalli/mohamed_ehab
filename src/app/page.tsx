@@ -22,7 +22,7 @@ interface TranslationsType {
 
 const defaultContent: ContentType = {
   videoUrl:
-    "https://www.youtube.com/watch?v=7sKfVjz3AkY&pp=ygUOZGVudGFsIGNvbnRlbnQ%3D",
+    "https://www.youtube.com/watch?v=BJQ7P5_ECFM",
   whatsappNumber: "+201093044708",
   luminProPhotos: [
     "/DSC_4872.jpg",
@@ -398,7 +398,7 @@ export default function Home() {
         )}
       </header>
 
-      {/* Video Section
+      {/* Video Section */}
       <section id="video" className="py-16 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
@@ -413,7 +413,7 @@ export default function Home() {
                     ? content.videoUrl
                         .replace("watch?v=", "embed/")
                         .replace("youtu.be/", "youtube.com/embed/")
-                        .split("&")[0]
+                        .split("&")[0] + "?autoplay=1"
                     : content.videoUrl
                 }
                 title="LumiPro Video"
@@ -425,7 +425,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Hero Section */}
       <section
