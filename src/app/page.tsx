@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 
 interface ContentType {
   videoUrl: string;
