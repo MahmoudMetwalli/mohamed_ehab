@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 
 interface ContentType {
   videoUrl: string;
@@ -430,7 +430,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="h-[60vh] bg-black flex items-center justify-center relative"
+        className="h-[100vh] bg-black flex items-center justify-center relative"
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center relative z-10">
@@ -445,6 +445,25 @@ export default function Home() {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
               {t("product.name")}
             </h1>
+          </div>
+          <div className="flex flex-col items-center">
+            <Button
+              size="lg"
+              className="bg-orange-400 hover:bg-orange-500 text-white px-10 py-3 rounded-full mb-8"
+              onClick={() => scrollToSection("product")}
+            >
+              {t("hero.cta")}
+            </Button>
+            <div className="animate-bounce">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white rounded-full"
+                onClick={() => scrollToSection("product")}
+              >
+                <ChevronDown className="h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
