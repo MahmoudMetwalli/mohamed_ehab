@@ -21,14 +21,9 @@ interface TranslationsType {
 }
 
 const defaultContent: ContentType = {
-  videoUrl:
-    "https://www.youtube.com/watch?v=BJQ7P5_ECFM",
+  videoUrl: "https://www.youtube.com/watch?v=BJQ7P5_ECFM",
   whatsappNumber: "+201093044708",
-  luminProPhotos: [
-    "/DSC_4872.jpg",
-    "/DSC_4864.jpg",
-    "/DSC_4894.jpg",
-  ],
+  luminProPhotos: ["/DSC_4872.jpg", "/DSC_4864.jpg", "/DSC_4894.jpg"],
   photos: [
     "/IMG_6057.JPG",
     "/IMG_6083.JPG",
@@ -166,7 +161,10 @@ const translations: TranslationsType = {
     ar: "ماذا يقول أطباء الأسنان",
   },
   "feedbacks.doctor1.name": { en: "Dr. Ahmed Hassan", ar: "د. أحمد حسن" },
-  "feedbacks.doctor1.title": { en: "Cosmetic Dentist", ar: "طبيب أسنان تجميلي" },
+  "feedbacks.doctor1.title": {
+    en: "Cosmetic Dentist",
+    ar: "طبيب أسنان تجميلي",
+  },
   "feedbacks.doctor1.quote": {
     en: "“LumiPro has completely transformed my dental photography. The precision and control it offers is unmatched. My patients love seeing their results in such clear, professional images.”",
     ar: "“لقد غيّر لومي برو تصوير الأسنان الخاص بي تمامًا. الدقة والتحكم الذي يوفره لا مثيل لهما. يحب مرضاي رؤية نتائجهم بهذه الصور الواضحة والاحترافية.”",
@@ -289,7 +287,11 @@ export default function Home() {
   };
 
   return (
-    <div className={`min-h-screen ${language === "ar" ? "rtl" : "ltr"} bg-black font-sans`}>
+    <div
+      className={`min-h-screen ${
+        language === "ar" ? "rtl" : "ltr"
+      } bg-black font-sans`}
+    >
       {/* Navigation */}
       <header
         className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -323,7 +325,9 @@ export default function Home() {
                   scrollToSection(item.id);
                 }}
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-orange-400 ${
-                  activeSection === item.id ? "text-orange-400" : "text-gray-200"
+                  activeSection === item.id
+                    ? "text-orange-400"
+                    : "text-gray-200"
                 }`}
               >
                 {item.label}
@@ -374,7 +378,9 @@ export default function Home() {
                   key={item.id}
                   href={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-orange-400 ${
-                    activeSection === item.id ? "text-orange-400" : "text-gray-200"
+                    activeSection === item.id
+                      ? "text-orange-400"
+                      : "text-gray-200"
                   }`}
                   onClick={(e) => {
                     e.preventDefault();
@@ -427,6 +433,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Buy Now Button */}
+      <div className="mt-10 text-center">
+        <a
+          href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg"
+        >
+          {t("product.buynow")}
+        </a>
+      </div>
+
       {/* Hero Section */}
       <section
         id="hero"
@@ -475,7 +493,11 @@ export default function Home() {
             {t("product.title")}
           </h2>
           <div className="flex flex-col items-center">
-            <div className={`text-center max-w-3xl ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+            <div
+              className={`text-center max-w-3xl ${
+                language === "ar" ? "text-right" : "text-left"
+              }`}
+            >
               <p className="text-lg sm:text-xl mb-8 text-gray-200 leading-relaxed">
                 {t("product.description")}
               </p>
@@ -484,7 +506,13 @@ export default function Home() {
               <div className="bg-black rounded-lg p-6">
                 <div className="space-y-8">
                   {/* Feature: Precision Diffusion */}
-                  <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
+                  <div
+                    className={`flex items-start ${
+                      language === "ar"
+                        ? "flex-row-reverse space-x-reverse"
+                        : "space-x-4"
+                    }`}
+                  >
                     <div className="flex-shrink-0 text-orange-400 mt-1">
                       <svg
                         className="w-6 h-6"
@@ -498,7 +526,11 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    <div
+                      className={`${
+                        language === "ar" ? "text-right" : "text-left"
+                      }`}
+                    >
                       <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.precision")}
                       </h3>
@@ -509,7 +541,13 @@ export default function Home() {
                   </div>
 
                   {/* Feature: Ultra-Durable Build */}
-                  <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
+                  <div
+                    className={`flex items-start ${
+                      language === "ar"
+                        ? "flex-row-reverse space-x-reverse"
+                        : "space-x-4"
+                    }`}
+                  >
                     <div className="flex-shrink-0 text-orange-400 mt-1">
                       <svg
                         className="w-6 h-6"
@@ -519,7 +557,11 @@ export default function Home() {
                         <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
                       </svg>
                     </div>
-                    <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    <div
+                      className={`${
+                        language === "ar" ? "text-right" : "text-left"
+                      }`}
+                    >
                       <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.durable")}
                       </h3>
@@ -530,7 +572,13 @@ export default function Home() {
                   </div>
 
                   {/* Feature: Professional Results */}
-                  <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
+                  <div
+                    className={`flex items-start ${
+                      language === "ar"
+                        ? "flex-row-reverse space-x-reverse"
+                        : "space-x-4"
+                    }`}
+                  >
                     <div className="flex-shrink-0 text-orange-400 mt-1">
                       <svg
                         className="w-6 h-6"
@@ -544,7 +592,11 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    <div
+                      className={`${
+                        language === "ar" ? "text-right" : "text-left"
+                      }`}
+                    >
                       <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.professional")}
                       </h3>
@@ -555,7 +607,13 @@ export default function Home() {
                   </div>
 
                   {/* Feature: Your time is a priority */}
-                  <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
+                  <div
+                    className={`flex items-start ${
+                      language === "ar"
+                        ? "flex-row-reverse space-x-reverse"
+                        : "space-x-4"
+                    }`}
+                  >
                     <div className="flex-shrink-0 text-orange-400 mt-1">
                       <svg
                         className="w-6 h-6"
@@ -569,7 +627,11 @@ export default function Home() {
                         ></path>
                       </svg>
                     </div>
-                    <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                    <div
+                      className={`${
+                        language === "ar" ? "text-right" : "text-left"
+                      }`}
+                    >
                       <h3 className="text-xl font-bold text-white mb-2">
                         {t("product.feature.time")}
                       </h3>
@@ -581,16 +643,16 @@ export default function Home() {
                 </div>
                 <div className="mt-10 max-w-sm mx-auto">
                   <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  {content.luminProPhotos.map((photo, index) => (
-                    <Image
-                      key={index}
-                      src={photo}
-                      alt="Product"
-                      width={300}
-                      height={400}
-                      className="w-full h-auto"
-                    />
-                  ))}
+                    {content.luminProPhotos.map((photo, index) => (
+                      <Image
+                        key={index}
+                        src={photo}
+                        alt="Product"
+                        width={300}
+                        height={400}
+                        className="w-full h-auto"
+                      />
+                    ))}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-4">
                       <h3 className="text-white text-lg font-semibold">
@@ -615,10 +677,24 @@ export default function Home() {
                   </p>
                   <div className="mt-12 space-y-8 max-w-3xl mx-auto">
                     {/* Feature 1: Innovative Technology */}
-                    <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse text-right' : 'text-left'} space-x-4`}>
+                    <div
+                      className={`flex items-start ${
+                        language === "ar"
+                          ? "flex-row-reverse text-right"
+                          : "text-left"
+                      } space-x-4`}
+                    >
                       <div className="flex-shrink-0 text-orange-400 mt-1">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                            clipRule="evenodd"
+                          ></path>
                         </svg>
                       </div>
                       <div>
@@ -632,10 +708,24 @@ export default function Home() {
                     </div>
 
                     {/* Feature 2: Sleek & Efficient */}
-                    <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse text-right' : 'text-left'} space-x-4`}>
+                    <div
+                      className={`flex items-start ${
+                        language === "ar"
+                          ? "flex-row-reverse text-right"
+                          : "text-left"
+                      } space-x-4`}
+                    >
                       <div className="flex-shrink-0 text-orange-400 mt-1">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                           <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          ></path>
                         </svg>
                       </div>
                       <div>
@@ -649,10 +739,24 @@ export default function Home() {
                     </div>
 
                     {/* Feature 3: Authoritative Design */}
-                    <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse text-right' : 'text-left'} space-x-4`}>
+                    <div
+                      className={`flex items-start ${
+                        language === "ar"
+                          ? "flex-row-reverse text-right"
+                          : "text-left"
+                      } space-x-4`}
+                    >
                       <div className="flex-shrink-0 text-orange-400 mt-1">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd"></path>
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clipRule="evenodd"
+                          ></path>
                         </svg>
                       </div>
                       <div>
@@ -666,9 +770,19 @@ export default function Home() {
                     </div>
 
                     {/* Feature 4: Seamless Compatibility */}
-                    <div className={`flex items-start ${language === 'ar' ? 'flex-row-reverse text-right' : 'text-left'} space-x-4`}>
+                    <div
+                      className={`flex items-start ${
+                        language === "ar"
+                          ? "flex-row-reverse text-right"
+                          : "text-left"
+                      } space-x-4`}
+                    >
                       <div className="flex-shrink-0 text-orange-400 mt-1">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <svg
+                          className="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
                           <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
                         </svg>
                       </div>
@@ -685,109 +799,6 @@ export default function Home() {
                 </div>
               </section>
 
-                    {/* Feedbacks Section */}
-      <section id="feedbacks" className="py-16 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
-            {t("feedbacks.title")}
-          </h2>
-          <div className="space-y-10 max-w-3xl mx-auto">
-            {/* Feedback 1: Dr. Ahmed Hassan */}
-            <div>
-              <div className={`flex items-center mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                <div className={`w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 ${language === 'ar' ? 'ml-3' : 'mr-3'}`}>
-                  <span className="text-white font-semibold text-sm">AH</span>
-                </div>
-                <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                  <h3 className="text-gray-100 font-semibold text-base">{t("feedbacks.doctor1.name")}</h3>
-                  <p className="text-gray-300 text-sm">{t("feedbacks.doctor1.title")}</p>
-                </div>
-              </div>
-              <div className={`flex mb-2 ${language === 'ar' ? 'pr-13 justify-end' : 'pl-13 justify-start'}`}>
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-4 h-4 text-orange-400 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className={`text-gray-300 text-sm italic leading-relaxed ${language === 'ar' ? 'pr-13 text-right' : 'pl-13 text-left'}`}>
-                {t("feedbacks.doctor1.quote")}
-              </p>
-            </div>
-
-            {/* Feedback 2: Dr. Sarah Mohamed */}
-            <div>
-              <div className={`flex items-center mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                <div className={`w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 ${language === 'ar' ? 'ml-3' : 'mr-3'}`}>
-                  <span className="text-white font-semibold text-sm">SM</span>
-                </div>
-                <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                  <h3 className="text-gray-100 font-semibold text-base">{t("feedbacks.doctor2.name")}</h3>
-                  <p className="text-gray-300 text-sm">{t("feedbacks.doctor2.title")}</p>
-                </div>
-              </div>
-              <div className={`flex mb-2 ${language === 'ar' ? 'pr-13 justify-end' : 'pl-13 justify-start'}`}>
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-4 h-4 text-orange-400 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className={`text-gray-300 text-sm italic leading-relaxed ${language === 'ar' ? 'pr-13 text-right' : 'pl-13 text-left'}`}>
-                {t("feedbacks.doctor2.quote")}
-              </p>
-            </div>
-
-            {/* Feedback 3: Dr. Khaled Ali */}
-            <div>
-              <div className={`flex items-center mb-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                <div className={`w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 ${language === 'ar' ? 'ml-3' : 'mr-3'}`}>
-                  <span className="text-white font-semibold text-sm">KA</span>
-                </div>
-                <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-                  <h3 className="text-gray-100 font-semibold text-base">{t("feedbacks.doctor3.name")}</h3>
-                  <p className="text-gray-300 text-sm">{t("feedbacks.doctor3.title")}</p>
-                </div>
-              </div>
-              <div className={`flex mb-2 ${language === 'ar' ? 'pr-13 justify-end' : 'pl-13 justify-start'}`}>
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-4 h-4 text-orange-400 mr-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className={`text-gray-300 text-sm italic leading-relaxed ${language === 'ar' ? 'pr-13 text-right' : 'pl-13 text-left'}`}>
-                {t("feedbacks.doctor3.quote")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-                    <div className="mt-10 text-center">
-                <a
-                  href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg"
-                >
-                  {t("product.buynow")}
-                </a>
-              </div>
               {/* Photos Section */}
               <section id="photos" className="py-16 bg-black">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -817,8 +828,18 @@ export default function Home() {
                         </div>
                         {/* Click indicator */}
                         <div className="absolute top-4 right-4 bg-black/50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -843,9 +864,180 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feedbacks Section */}
+      <section id="feedbacks" className="py-16 bg-black">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
+            {t("feedbacks.title")}
+          </h2>
+          <div className="space-y-10 max-w-3xl mx-auto">
+            {/* Feedback 1: Dr. Ahmed Hassan */}
+            <div>
+              <div
+                className={`flex items-center mb-3 ${
+                  language === "ar" ? "flex-row-reverse" : ""
+                }`}
+              >
+                <div
+                  className={`w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    language === "ar" ? "ml-3" : "mr-3"
+                  }`}
+                >
+                  <span className="text-white font-semibold text-sm">AH</span>
+                </div>
+                <div
+                  className={`${
+                    language === "ar" ? "text-right" : "text-left"
+                  }`}
+                >
+                  <h3 className="text-gray-100 font-semibold text-base">
+                    {t("feedbacks.doctor1.name")}
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    {t("feedbacks.doctor1.title")}
+                  </p>
+                </div>
+              </div>
+              <div
+                className={`flex mb-2 ${
+                  language === "ar"
+                    ? "pr-13 justify-end"
+                    : "pl-13 justify-start"
+                }`}
+              >
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-orange-400 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p
+                className={`text-gray-300 text-sm italic leading-relaxed ${
+                  language === "ar" ? "pr-13 text-right" : "pl-13 text-left"
+                }`}
+              >
+                {t("feedbacks.doctor1.quote")}
+              </p>
+            </div>
+
+            {/* Feedback 2: Dr. Sarah Mohamed */}
+            <div>
+              <div
+                className={`flex items-center mb-3 ${
+                  language === "ar" ? "flex-row-reverse" : ""
+                }`}
+              >
+                <div
+                  className={`w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    language === "ar" ? "ml-3" : "mr-3"
+                  }`}
+                >
+                  <span className="text-white font-semibold text-sm">SM</span>
+                </div>
+                <div
+                  className={`${
+                    language === "ar" ? "text-right" : "text-left"
+                  }`}
+                >
+                  <h3 className="text-gray-100 font-semibold text-base">
+                    {t("feedbacks.doctor2.name")}
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    {t("feedbacks.doctor2.title")}
+                  </p>
+                </div>
+              </div>
+              <div
+                className={`flex mb-2 ${
+                  language === "ar"
+                    ? "pr-13 justify-end"
+                    : "pl-13 justify-start"
+                }`}
+              >
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-orange-400 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p
+                className={`text-gray-300 text-sm italic leading-relaxed ${
+                  language === "ar" ? "pr-13 text-right" : "pl-13 text-left"
+                }`}
+              >
+                {t("feedbacks.doctor2.quote")}
+              </p>
+            </div>
+
+            {/* Feedback 3: Dr. Khaled Ali */}
+            <div>
+              <div
+                className={`flex items-center mb-3 ${
+                  language === "ar" ? "flex-row-reverse" : ""
+                }`}
+              >
+                <div
+                  className={`w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    language === "ar" ? "ml-3" : "mr-3"
+                  }`}
+                >
+                  <span className="text-white font-semibold text-sm">KA</span>
+                </div>
+                <div
+                  className={`${
+                    language === "ar" ? "text-right" : "text-left"
+                  }`}
+                >
+                  <h3 className="text-gray-100 font-semibold text-base">
+                    {t("feedbacks.doctor3.name")}
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    {t("feedbacks.doctor3.title")}
+                  </p>
+                </div>
+              </div>
+              <div
+                className={`flex mb-2 ${
+                  language === "ar"
+                    ? "pr-13 justify-end"
+                    : "pl-13 justify-start"
+                }`}
+              >
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-orange-400 mr-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p
+                className={`text-gray-300 text-sm italic leading-relaxed ${
+                  language === "ar" ? "pr-13 text-right" : "pl-13 text-left"
+                }`}
+              >
+                {t("feedbacks.doctor3.quote")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Image Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
@@ -855,8 +1047,18 @@ export default function Home() {
               className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200"
               aria-label="Close image"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
             <Image
@@ -876,21 +1078,29 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Column 1: Logo and Description */}
-            <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
+            <div
+              className={`${language === "ar" ? "text-right" : "text-left"}`}
+            >
               <Image
                 src={content.logoUrl}
                 alt="Logo"
                 width={40}
                 height={40}
-                className={`h-10 w-10 object-contain mb-4 ${language === 'ar' ? 'md:ml-auto' : ''}`}
+                className={`h-10 w-10 object-contain mb-4 ${
+                  language === "ar" ? "md:ml-auto" : ""
+                }`}
               />
               <p className="text-sm text-gray-400 leading-relaxed">
                 {t("footer.description")}
               </p>
             </div>
             {/* Column 2: Quick Links */}
-            <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-              <h3 className="text-lg font-semibold mb-4">{t("footer.quicklinks")}</h3>
+            <div
+              className={`${language === "ar" ? "text-right" : "text-left"}`}
+            >
+              <h3 className="text-lg font-semibold mb-4">
+                {t("footer.quicklinks")}
+              </h3>
               <ul className="space-y-2">
                 {navItems.map((item) => (
                   <li key={item.id}>
@@ -909,8 +1119,12 @@ export default function Home() {
               </ul>
             </div>
             {/* Column 3: Contact Us */}
-            <div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}>
-              <h3 className="text-lg font-semibold mb-4">{t("footer.contact")}</h3>
+            <div
+              className={`${language === "ar" ? "text-right" : "text-left"}`}
+            >
+              <h3 className="text-lg font-semibold mb-4">
+                {t("footer.contact")}
+              </h3>
               <p className="text-sm text-gray-400 mb-4">
                 {t("footer.contact.question")}
               </p>
@@ -918,10 +1132,12 @@ export default function Home() {
                 href={`https://wa.me/${content.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md transition-colors w-fit text-sm ${language === 'ar' ? 'ml-auto flex-row-reverse' : 'mr-auto'}`}
+                className={`flex items-center text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md transition-colors w-fit text-sm ${
+                  language === "ar" ? "ml-auto flex-row-reverse" : "mr-auto"
+                }`}
               >
                 <svg
-                  className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} // Adjusted margin for icon
+                  className={`w-4 h-4 ${language === "ar" ? "ml-2" : "mr-2"}`} // Adjusted margin for icon
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -933,7 +1149,8 @@ export default function Home() {
           </div>
           <div className="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
             <p>
-              © {new Date().getFullYear()} {t("product.name")}. {t("footer.rights")}
+              © {new Date().getFullYear()} {t("product.name")}.{" "}
+              {t("footer.rights")}
             </p>
             <div className="mt-3 flex justify-center space-x-3">
               <button
