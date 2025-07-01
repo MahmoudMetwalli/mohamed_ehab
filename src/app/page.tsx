@@ -261,11 +261,11 @@ export default function Home() {
   };
 
   const navItems = [
-    // { id: "video", label: t("nav.video"), href: "#video" },
+    { id: "video", label: t("nav.video"), href: "#video" },
     { id: "product", label: t("nav.product"), href: "#product" },
     { id: "description", label: t("nav.description"), href: "#description" },
-    { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
     { id: "photos", label: t("nav.photos"), href: "#photos" },
+    { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
   ];
 
   const scrollToSection = (id: string) => {
@@ -453,14 +453,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center relative z-10">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <Image
-              src={content.logoUrl}
-              alt="Logo"
-              width={80}
-              height={80}
-              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain"
-            />
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
+            <h1 className="text-6xl sm:text-8xl lg:text-9xl font-bold text-white">
               {t("product.name")}
             </h1>
           </div>
@@ -1035,6 +1028,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Buy Now Button */}
+      <div className="mt-10 text-center">
+        <a
+          href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg"
+        >
+          {t("product.buynow")}
+        </a>
+      </div>
       {/* Image Modal */}
       {selectedImage && (
         <div
