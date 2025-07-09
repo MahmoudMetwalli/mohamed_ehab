@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe } from "lucide-react";
 
 interface ContentType {
   videoUrl: string;
@@ -203,12 +203,23 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showFloatingButtons, setShowFloatingButtons] = useState(true);
 
   const t = (key: string): string => translations[key]?.[language] || key;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Check if user is near the bottom of the page
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const clientHeight = window.innerHeight;
+      const distanceFromBottom = scrollHeight - (scrollTop + clientHeight);
+      
+      // Hide floating buttons when within 200px of bottom
+      setShowFloatingButtons(distanceFromBottom > 200);
+      
       const sections = document.querySelectorAll("section[id]");
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop - 100;
@@ -262,8 +273,8 @@ export default function Home() {
 
   const navItems = [
     { id: "video", label: t("nav.video"), href: "#video" },
-    { id: "product", label: t("nav.product"), href: "#product" },
-    { id: "description", label: t("nav.description"), href: "#description" },
+    // { id: "product", label: t("nav.product"), href: "#product" },
+    // { id: "description", label: t("nav.description"), href: "#description" },
     { id: "photos", label: t("nav.photos"), href: "#photos" },
     { id: "feedbacks", label: t("feedbacks.title"), href: "#feedbacks" },
   ];
@@ -434,7 +445,7 @@ export default function Home() {
       </section>
 
       {/* Buy Now Button */}
-      <div className="mt-10 text-center">
+      {/* <div className="mt-10 text-center">
         <a
           href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
           target="_blank"
@@ -443,10 +454,10 @@ export default function Home() {
         >
           {t("product.buynow")}
         </a>
-      </div>
+      </div> */}
 
       {/* Hero Section */}
-      <section
+      {/* <section
         id="hero"
         className="h-[100vh] bg-black flex items-center justify-center relative"
       >
@@ -477,10 +488,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Product Section */}
-      <section id="product" className="py-16 bg-black">
+      {/* <section id="product" className="py-16 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
             {t("product.title")}
@@ -497,9 +508,9 @@ export default function Home() {
             </div>
             <div className="mt-10 max-w-4xl mx-auto w-full">
               <div className="bg-black rounded-lg p-6">
-                <div className="space-y-8">
+                <div className="space-y-8"> */}
                   {/* Feature: Precision Diffusion */}
-                  <div
+                  {/* <div
                     className={`flex items-start ${
                       language === "ar"
                         ? "flex-row-reverse space-x-reverse"
@@ -531,10 +542,10 @@ export default function Home() {
                         {t("product.feature.precision.desc")}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Feature: Ultra-Durable Build */}
-                  <div
+                  {/* <div
                     className={`flex items-start ${
                       language === "ar"
                         ? "flex-row-reverse space-x-reverse"
@@ -562,10 +573,10 @@ export default function Home() {
                         {t("product.feature.durable.desc")}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Feature: Professional Results */}
-                  <div
+                  {/* <div
                     className={`flex items-start ${
                       language === "ar"
                         ? "flex-row-reverse space-x-reverse"
@@ -597,10 +608,10 @@ export default function Home() {
                         {t("product.feature.professional.desc")}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Feature: Your time is a priority */}
-                  <div
+                  {/* <div
                     className={`flex items-start ${
                       language === "ar"
                         ? "flex-row-reverse space-x-reverse"
@@ -657,20 +668,20 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Product Description Section */}
-              <section id="description" className="py-16 bg-black">
+              {/* <section id="description" className="py-16 bg-black">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                   <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
                     {t("description.title")}
                   </h2>
                   <p className="text-lg text-gray-200 leading-relaxed whitespace-pre-line text-center max-w-3xl mx-auto">
                     {t("product.detailed.description")}
-                  </p>
+                  </p> */}
                   <div className="mt-12 space-y-8 max-w-3xl mx-auto">
                     {/* Feature 1: Innovative Technology */}
-                    <div
+                    {/* <div
                       className={`flex items-start ${
                         language === "ar"
                           ? "flex-row-reverse text-right"
@@ -698,10 +709,11 @@ export default function Home() {
                           {t("description.feature.technology.desc")}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
+                  </div>
 
                     {/* Feature 2: Sleek & Efficient */}
-                    <div
+                    {/* <div
                       className={`flex items-start ${
                         language === "ar"
                           ? "flex-row-reverse text-right"
@@ -729,10 +741,10 @@ export default function Home() {
                           {t("description.feature.design.desc")}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Feature 3: Authoritative Design */}
-                    <div
+                    {/* <div
                       className={`flex items-start ${
                         language === "ar"
                           ? "flex-row-reverse text-right"
@@ -760,10 +772,10 @@ export default function Home() {
                           {t("description.feature.authority.desc")}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Feature 4: Seamless Compatibility */}
-                    <div
+                    {/* <div
                       className={`flex items-start ${
                         language === "ar"
                           ? "flex-row-reverse text-right"
@@ -790,7 +802,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
 
               {/* Photos Section */}
               <section id="photos" className="py-16 bg-black">
@@ -842,7 +854,7 @@ export default function Home() {
               </section>
 
               {/* Buy Now Button */}
-              <div className="mt-10 text-center">
+              {/* <div className="mt-10 text-center">
                 <a
                   href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
                   target="_blank"
@@ -855,7 +867,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Feedbacks Section */}
       <section id="feedbacks" className="py-16 bg-black">
@@ -1028,17 +1040,46 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Buy Now Button */}
-      <div className="mt-10 text-center">
-        <a
-          href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg"
-        >
-          {t("product.buynow")}
-        </a>
-      </div>
+
+      {/* Bottom Buy Now Section */}
+      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Dental Photography?
+          </h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of dental professionals who trust LumiPro for perfect lighting every time.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
+              </svg>
+              {t("product.buynow")}
+            </a>
+            <a
+              href={`https://wa.me/${content.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  fillRule="evenodd"
+                  d="M20.473 3.527C18.192 1.247 15.198 0 12.007 0c-6.583 0-11.94 5.356-11.94 11.94a11.91 11.91 0 001.592 5.98L0 24l6.193-1.624a11.91 11.91 0 005.738 1.464h.005c6.583 0 11.94-5.356 11.94-11.94 0-3.196-1.245-6.194-3.403-8.373zm-8.466 18.36h-.004a9.884 9.884 0 01-5.045-1.383l-.36-.216-3.744.982.999-3.648-.237-.378a9.92 9.92 0 01-1.514-5.296c0-5.473 4.454-9.928 9.932-9.928a9.87 9.87 0 017.029 2.91 9.87 9.87 0 012.91 7.028c0 5.472-4.455 9.928-9.966 9.928zm5.442-7.442c-.3-.15-1.773-.874-2.048-.973-.275-.099-.475-.149-.676.15-.2.299-.774.973-.95 1.174-.175.201-.35.225-.65.075-.3-.15-1.266-.467-2.414-1.486-.891-.794-1.5-1.775-1.676-2.074-.175-.299-.019-.46.132-.608.135-.133.3-.347.45-.521.15-.174.2-.298.3-.497.1-.2.05-.374-.025-.523-.075-.149-.675-1.629-.927-2.23-.243-.584-.49-.5-.675-.51-.174-.008-.375-.01-.575-.01-.2 0-.524.074-.8.373-.275.299-1.05 1.024-1.05 2.498 0 1.474 1.075 2.898 1.225 3.097.15.2 2.125 3.248 5.14 4.553.718.31 1.28.495 1.718.636.722.225 1.379.194 1.896.118.578-.087 1.778-.727 2.03-1.43.25-.703.25-1.304.175-1.43-.075-.125-.275-.2-.575-.35z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              {t("contact.whatsapp")}
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Image Modal */}
       {selectedImage && (
         <div
@@ -1182,28 +1223,47 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* WhatsApp Button */}
-      <div className="fixed bottom-4 right-4 z-50 group">
-        <a
-          href={`https://wa.me/${content.whatsappNumber}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-full shadow-md transition-all duration-300 group-hover:scale-105 group-hover:pr-3"
-          aria-label="WhatsApp"
-          title={t("contact.whatsapp")}
-        >
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              fillRule="evenodd"
-              d="M20.473 3.527C18.192 1.247 15.198 0 12.007 0c-6.583 0-11.94 5.356-11.94 11.94a11.91 11.91 0 001.592 5.98L0 24l6.193-1.624a11.91 11.91 0 005.738 1.464h.005c6.583 0 11.94-5.356 11.94-11.94 0-3.196-1.245-6.194-3.403-8.373zm-8.466 18.36h-.004a9.884 9.884 0 01-5.045-1.383l-.36-.216-3.744.982.999-3.648-.237-.378a9.92 9.92 0 01-1.514-5.296c0-5.473 4.454-9.928 9.932-9.928a9.87 9.87 0 017.029 2.91 9.87 9.87 0 012.91 7.028c0 5.472-4.455 9.928-9.966 9.928zm5.442-7.442c-.3-.15-1.773-.874-2.048-.973-.275-.099-.475-.149-.676.15-.2.299-.774.973-.95 1.174-.175.201-.35.225-.65.075-.3-.15-1.266-.467-2.414-1.486-.891-.794-1.5-1.775-1.676-2.074-.175-.299-.019-.46.132-.608.135-.133.3-.347.45-.521.15-.174.2-.298.3-.497.1-.2.05-.374-.025-.523-.075-.149-.675-1.629-.927-2.23-.243-.584-.49-.5-.675-.51-.174-.008-.375-.01-.575-.01-.2 0-.524.074-.8.373-.275.299-1.05 1.024-1.05 2.498 0 1.474 1.075 2.898 1.225 3.097.15.2 2.125 3.248 5.14 4.553.718.31 1.28.495 1.718.636.722.225 1.379.194 1.896.118.578-.087 1.778-.727 2.03-1.43.25-.703.25-1.304.175-1.43-.075-.125-.275-.2-.575-.35z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <span className="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-500 ease-in-out text-sm">
-            {t("contact.whatsapp.tooltip")}
-          </span>
-        </a>
-      </div>
+      {/* Floating Action Buttons */}
+      {showFloatingButtons && (
+        <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3 transition-all duration-300">
+          {/* Buy Now Button */}
+          <a
+            href={`https://wa.me/${content.whatsappNumber}?text=I'm interested in LumiPro dental photography diffuser`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-white px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            title={t("product.buynow")}
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
+            </svg>
+            <span className="whitespace-nowrap text-sm font-semibold">
+              {t("product.buynow")}
+            </span>
+          </a>
+
+          {/* WhatsApp Button */}
+          <a
+            href={`https://wa.me/${content.whatsappNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group-hover:pr-3"
+            aria-label="WhatsApp"
+            title={t("contact.whatsapp")}
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                fillRule="evenodd"
+                d="M20.473 3.527C18.192 1.247 15.198 0 12.007 0c-6.583 0-11.94 5.356-11.94 11.94a11.91 11.91 0 001.592 5.98L0 24l6.193-1.624a11.91 11.91 0 005.738 1.464h.005c6.583 0 11.94-5.356 11.94-11.94 0-3.196-1.245-6.194-3.403-8.373zm-8.466 18.36h-.004a9.884 9.884 0 01-5.045-1.383l-.36-.216-3.744.982.999-3.648-.237-.378a9.92 9.92 0 01-1.514-5.296c0-5.473 4.454-9.928 9.932-9.928a9.87 9.87 0 017.029 2.91 9.87 9.87 0 012.91 7.028c0 5.472-4.455 9.928-9.966 9.928zm5.442-7.442c-.3-.15-1.773-.874-2.048-.973-.275-.099-.475-.149-.676.15-.2.299-.774.973-.95 1.174-.175.201-.35.225-.65.075-.3-.15-1.266-.467-2.414-1.486-.891-.794-1.5-1.775-1.676-2.074-.175-.299-.019-.46.132-.608.135-.133.3-.347.45-.521.15-.174.2-.298.3-.497.1-.2.05-.374-.025-.523-.075-.149-.675-1.629-.927-2.23-.243-.584-.49-.5-.675-.51-.174-.008-.375-.01-.575-.01-.2 0-.524.074-.8.373-.275.299-1.05 1.024-1.05 2.498 0 1.474 1.075 2.898 1.225 3.097.15.2 2.125 3.248 5.14 4.553.718.31 1.28.495 1.718.636.722.225 1.379.194 1.896.118.578-.087 1.778-.727 2.03-1.43.25-.703.25-1.304.175-1.43-.075-.125-.275-.2-.575-.35z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-500 ease-in-out text-sm">
+              {t("contact.whatsapp.tooltip")}
+            </span>
+          </a>
+        </div>
+      )}
     </div>
   );
 }
